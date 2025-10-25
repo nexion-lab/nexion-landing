@@ -37,7 +37,7 @@ export function Hero() {
             <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
               Turn Ideas into Web3 Reality
               <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                — Instantly
+                Instantly
               </span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-xl leading-relaxed">

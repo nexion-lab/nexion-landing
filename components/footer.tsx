@@ -2,6 +2,7 @@
 
 import { Github, Twitter, Linkedin, Mail } from "lucide-react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 export function Footer() {
   const containerVariants = {
@@ -29,10 +30,16 @@ export function Footer() {
           viewport={{ once: true }}
         >
           <motion.div variants={itemVariants}>
-            <div className="flex items-center gap-2 mb-4 group cursor-pointer">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center group-hover:shadow-lg group-hover:shadow-primary/50 transition-all duration-300 group-hover:scale-110">
-                <span className="text-primary-foreground font-bold">N</span>
-              </div>
+            <div className="flex items-center gap-3 group cursor-pointer">
+          <div className="w-10 h-10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <Image
+              src="/nexion-icon.jpg"
+              alt="Nexion Logo"
+              width={20}
+              height={20}
+              className="w-full h-full object-contain rounded-lg"
+            />
+          </div>
               <span className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                 Nexion
               </span>
