@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
 
@@ -11,9 +12,15 @@ export function Header() {
   return (
     <header className="fixed top-0 w-full bg-background/80 backdrop-blur-xl border-b border-border z-50 transition-all duration-300">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-2 group cursor-pointer">
-          <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center group-hover:shadow-lg group-hover:shadow-primary/50 transition-all duration-300 group-hover:scale-110">
-            <span className="text-primary-foreground font-bold text-lg">N</span>
+         <div className="flex items-center gap-3 group cursor-pointer">
+          <div className="w-10 h-10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <Image
+              src="/nexion-icon.jpg"
+              alt="Nexion Logo"
+              width={40}
+              height={40}
+              className="w-full h-full object-contain rounded-lg"
+            />
           </div>
           <span className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
             Nexion
