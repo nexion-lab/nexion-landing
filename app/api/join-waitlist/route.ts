@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
 
     // Google Forms expects URL-encoded data, not JSON
     const formData = new URLSearchParams();
-    const googleemail = process.env.google_email;
+    const googleemail = process.env.google_email || "";
     formData.append(String(googleemail), email);
 
     await axios.post(String(formUrl), formData.toString(), {
