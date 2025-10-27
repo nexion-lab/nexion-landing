@@ -5,13 +5,18 @@ import { Moon, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false)
+  const [isDark, setIsDark] = useState(true)
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
-    const isDarkMode = document.documentElement.classList.contains("dark")
+    const isDarkMode = localStorage.getItem("theme") !== "light"
     setIsDark(isDarkMode)
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark")
+    } else {
+      document.documentElement.classList.remove("dark")
+    }
   }, [])
 
   const toggleTheme = () => {
@@ -36,7 +41,7 @@ export function ThemeToggle() {
       className="border-border hover:bg-card bg-transparent"
       aria-label="Toggle theme"
     >
-      {isDark ? <Sun size={20} /> : <Moon size={20} />}
+      {isDark ? <Sun size={20} className="text-foreground" /> : <Moon size={20} className="text-foreground" />}
     </Button>
   )
 }

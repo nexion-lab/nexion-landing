@@ -3,10 +3,35 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Zap } from "lucide-react"
 import { motion } from "framer-motion"
+import { useState, useEffect } from "react"
 
 export function Hero() {
+  const headingPhrases = [
+    { first: "Ship", second: "dApps." },
+    { first: "Zero", second: "Code." },
+    { first: "Infinite", second: "Power." },
+  ]
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % headingPhrases.length)
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [])
+
+  const carouselVariants = {
+    enter: { opacity: 0, y: 20 },
+    center: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+    exit: { opacity: 0, y: -20, transition: { duration: 0.4 } },
+  }
+
   return (
-    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
+    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto overflow-hidden">
       <div className="grid md:grid-cols-2 gap-16 items-center">
         <motion.div
           className="space-y-10"
@@ -15,12 +40,12 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.div
-            className="w-[17.2rem]"
+            className="w-fit"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="p-0.5 bg-gradient-to-r from-accent via-primary to-accent rounded-full hover:shadow-lg hover:shadow-primary/30 transition-all duration-300">
+            <div className="p-px bg-gradient-to-r from-accent via-primary via-50% to-accent rounded-full hover:shadow-lg hover:shadow-primary/30 transition-all duration-300">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-card rounded-full">
                 <Zap size={16} className="text-accent animate-pulse" />
                 <span className="text-sm text-muted-foreground">No Code. No Limits. Just Web3.</span>
@@ -28,21 +53,30 @@ export function Hero() {
             </div>
           </motion.div>
 
-          <motion.div
-            className="space-y-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
-              Turn Ideas into Web3 Reality
-              <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Instantly
-              </span>
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-xl leading-relaxed">
-              Ship Web3 dApps Fast — Without Writing Code. Your Gateway to No-Code Web3 Development.
-            </p>
+          <motion.div className="space-y-4">
+            <div className="space-y-2 h-24 flex items-center">
+              <motion.h1
+                key={currentIndex}
+                className="text-5xl md:text-6xl font-bold leading-tight"
+                variants={carouselVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+              >
+                <span className="dark:text-white text-black">{headingPhrases[currentIndex].first}</span>{" "}
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  {headingPhrases[currentIndex].second}
+                </span>
+              </motion.h1>
+            </div>
+            <motion.p
+              className="text-xl text-muted-foreground max-w-2xl leading-relaxed pt-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              Nexion lets you create production grade dApps visually faster than ever, smarter than code.
+            </motion.p>
           </motion.div>
 
           <motion.div
@@ -52,11 +86,13 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg h-12 px-8 gap-2 transition-all duration-300 hover:shadow-lg hover:shadow-primary/50 hover:scale-105">
-              Start Building <ArrowRight size={20} />
+              <a href="/join-waitlist" className="w-full h-full flex items-center justify-center gap-2">
+                Join Waiting List <ArrowRight size={20} />
+              </a>
             </Button>
             <Button
               variant="outline"
-              className="border-border hover:bg-card text-lg h-12 px-8 bg-transparent transition-all duration-300 hover:border-primary/50"
+              className="border-border hover:bg-primary/10 text-foreground text-lg h-12 px-8 bg-transparent transition-all duration-300 hover:border-primary/50"
             >
               Watch Demo
             </Button>
