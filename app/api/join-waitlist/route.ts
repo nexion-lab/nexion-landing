@@ -14,6 +14,7 @@ export async function POST(request: NextRequest) {
     const formData = new URLSearchParams();
     const googleemail = process.env.google_email || "";
     formData.append(String(googleemail), email);
+    console.log(googleemail);
 
     await axios.post(String(formUrl), formData.toString(), {
       headers: {
