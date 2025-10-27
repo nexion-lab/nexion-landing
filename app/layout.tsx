@@ -8,15 +8,18 @@ const _inter = Inter({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Nexion - AI-Powered Platform for Seamless Integration',
-  description: 'Discover Nexion, the cutting-edge AI platform that revolutionizes how you connect and integrate technologies. Join the waiting list for early access.',
+  title: 'Nexion - AI Powered DApp Builder for Solana',
+  description: "Discover Nexion , cutting edge AI platform that revolutionizes DApp building in Solana. Join the waitlist for early access.Made with ❤️ by Nexion Labs @ 2025",
   keywords: ['AI platform', 'integration', 'technology', 'Nexion', 'artificial intelligence', 'automation'],
   authors: [{ name: 'Nexion Team' }],
   creator: 'Nexion',
   publisher: 'Nexion',
+  icons: {
+    icon: '/nexion-icon.jpg',
+  },
   openGraph: {
-    title: 'Nexion - AI-Powered Platform for Seamless Integration',
-    description: 'Discover Nexion, the cutting-edge AI platform that revolutionizes how you connect and integrate technologies. Join the waiting list for early access.',
+    title: 'Nexion - AI Powered DApp Builder for Solana',
+    description: "Discover Nexion , cutting edge AI platform that revolutionizes DApp building in Solana. Join the waitlist for early access.Made with ❤️ by Nexion Labs @ 2025",
     url: 'https://nexion.ai',
     siteName: 'Nexion',
     images: [
