@@ -19,6 +19,7 @@ const buttonVariants = cva(
           'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
         link: 'text-primary underline-offset-4 hover:underline',
         signup: 'bg-gradient-to-r from-primary to-accent text-primary-foreground hover:from-primary/90 hover:to-accent/90 hover:shadow-lg hover:shadow-primary/50 hover:scale-105 transition-all duration-300',
+        cta: 'relative bg-blue-600 text-white hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300 overflow-hidden before:absolute before:inset-0 before:rounded-md before:p-[2px] before:bg-gradient-to-r before:from-blue-400 before:to-purple-600 before:animate-gradient-x before:content-[""] before:-z-10',
       },
       size: {
         default: 'h-9 px-4 py-2 has-[>svg]:px-3',

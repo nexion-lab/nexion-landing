@@ -2,34 +2,16 @@
 
 import { useEffect, useState } from "react"
 import { Moon, Sun } from "lucide-react"
+import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
 
 export function ThemeToggle() {
-  const [isDark, setIsDark] = useState(true)
+  const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
-    const isDarkMode = localStorage.getItem("theme") !== "light"
-    setIsDark(isDarkMode)
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark")
-    } else {
-      document.documentElement.classList.remove("dark")
-    }
   }, [])
-
-  const toggleTheme = () => {
-    if (isDark) {
-      document.documentElement.classList.remove("dark")
-      localStorage.setItem("theme", "light")
-      setIsDark(false)
-    } else {
-      document.documentElement.classList.add("dark")
-      localStorage.setItem("theme", "dark")
-      setIsDark(true)
-    }
-  }
 
   if (!mounted) return null
 
@@ -37,11 +19,11 @@ export function ThemeToggle() {
     <Button
       variant="outline"
       size="icon"
-      onClick={toggleTheme}
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       className="border-border hover:bg-card bg-transparent"
       aria-label="Toggle theme"
     >
-      {isDark ? <Sun size={20} className="text-foreground" /> : <Moon size={20} className="text-foreground" />}
+      {theme === "dark" ? <Sun size={20} className="text-foreground" /> : <Moon size={20} className="text-foreground" />}
     </Button>
   )
 }

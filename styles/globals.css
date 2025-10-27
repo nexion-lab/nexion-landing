@@ -115,6 +115,19 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@keyframes gradient-x {
+  0%, 100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease infinite;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
