@@ -59,14 +59,14 @@ export function Header() {
           </a>
         </div>
 
-        <div className="hidden md:flex items-center gap-4">
-          <ThemeToggle />
-          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 hover:shadow-lg hover:shadow-primary/50">
-            <a href="/join-waitlist" className="w-full h-full flex items-center justify-center">
-              Join Waiting List
-            </a>
-          </Button>
-        </div>
+         <div className="hidden md:flex items-center gap-4">
+           <ThemeToggle />
+           <Button variant="cta" size="lg">
+             <a href="/join-waitlist" className="w-full h-full flex items-center justify-center">
+               Join Waiting List
+             </a>
+           </Button>
+         </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -99,14 +99,14 @@ export function Header() {
             <a href="#" className="block text-muted-foreground hover:text-foreground transition-colors duration-300">
               Pricing
             </a>
-            <div className="flex gap-2 pt-4">
-              <ThemeToggle />
-              <Button className="flex-1 bg-primary text-primary-foreground">
-                <a href="/join-waitlist" className="w-full h-full flex items-center justify-center">
-                  Join Waiting List
-                </a>
-              </Button>
-            </div>
+             <div className="flex gap-2 pt-4">
+               <ThemeToggle />
+               <Button variant="cta" size="lg" className="flex-1">
+                 <a href="/join-waitlist" className="w-full h-full flex items-center justify-center">
+                   Join Waiting List
+                 </a>
+               </Button>
+             </div>
           </div>
         </div>
       )}
