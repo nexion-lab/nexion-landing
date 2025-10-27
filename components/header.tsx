@@ -12,7 +12,7 @@ export function Header() {
   return (
     <header className="fixed top-0 w-full bg-background/80 backdrop-blur-xl border-b border-border z-50 transition-all duration-300">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-         <div className="flex items-center gap-3 group cursor-pointer">
+        <div className="flex items-center gap-3 group cursor-pointer">
           <div className="w-10 h-10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
             <Image
               src="/nexion-icon.jpg"
@@ -61,14 +61,10 @@ export function Header() {
 
         <div className="hidden md:flex items-center gap-4">
           <ThemeToggle />
-          <Button
-            variant="outline"
-            className="border-border hover:bg-card bg-transparent transition-all duration-300 hover:border-primary/50"
-          >
-            Sign In
-          </Button>
           <Button className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 hover:shadow-lg hover:shadow-primary/50">
-            Start Building
+            <a href="/join-waitlist" className="w-full h-full flex items-center justify-center">
+              Join Waiting List
+            </a>
           </Button>
         </div>
 
@@ -105,10 +101,11 @@ export function Header() {
             </a>
             <div className="flex gap-2 pt-4">
               <ThemeToggle />
-              <Button variant="outline" className="flex-1 border-border bg-transparent">
-                Sign In
+              <Button className="flex-1 bg-primary text-primary-foreground">
+                <a href="/join-waitlist" className="w-full h-full flex items-center justify-center">
+                  Join Waiting List
+                </a>
               </Button>
-              <Button className="flex-1 bg-primary text-primary-foreground">Start Building</Button>
             </div>
           </div>
         </div>

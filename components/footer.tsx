@@ -1,6 +1,6 @@
 "use client"
 
-import { Github, Twitter, Linkedin, Mail } from "lucide-react"
+import { Github, Twitter, Linkedin, Mail, Instagram } from "lucide-react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 
@@ -30,16 +30,15 @@ export function Footer() {
           viewport={{ once: true }}
         >
           <motion.div variants={itemVariants}>
-            <div className="flex items-center gap-3 group cursor-pointer">
-          <div className="w-10 h-10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-            <Image
-              src="/nexion-icon.jpg"
-              alt="Nexion Logo"
-              width={20}
-              height={20}
-              className="w-full h-full object-contain rounded-lg"
-            />
-          </div>
+            <div className="flex items-center gap-2 mb-4 group cursor-pointer">
+              <Image
+                src="/nexion-icon.jpg"
+                alt="Nexion Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8 object-contain rounded-lg group-hover:scJoin Waiting List
+ale-110 transition-transform duration-300"
+              />
               <span className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                 Nexion
               </span>
@@ -85,14 +84,14 @@ export function Footer() {
             <h4 className="font-semibold text-foreground mb-4">Connect</h4>
             <div className="flex gap-4">
               {[
-                { icon: Twitter, label: "Twitter" },
-                { icon: Github, label: "GitHub" },
-                { icon: Linkedin, label: "LinkedIn" },
-                { icon: Mail, label: "Email" },
-              ].map(({ icon: Icon, label }) => (
+                { icon: Twitter, label: "Twitter" ,link:"https://x.com/nexionlab"},
+                { icon: Github, label: "GitHub",link:"https://github.com/nexion-lab" },
+                { icon: Linkedin, label: "LinkedIn",link:"https://www.linkedin.com/company/nexionfun/posts/?feedView=all" },
+                { icon: Instagram, label: "Instagram",link:"https://www.instagram.com/nexion.labs/" },
+              ].map(({ icon: Icon, label ,link}) => (
                 <motion.a
                   key={label}
-                  href="#"
+                  href={link}
                   className="text-muted-foreground hover:text-primary transition-colors duration-300"
                   whileHover={{ scale: 1.2, rotate: 10 }}
                   whileTap={{ scale: 0.95 }}
