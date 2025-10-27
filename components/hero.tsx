@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Zap } from "lucide-react"
-import { motion } from "framer-motion"
+import { motion, easeOut } from "framer-motion"
 import { useState, useEffect } from "react"
 
 export function Hero() {
@@ -25,7 +25,7 @@ export function Hero() {
     center: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.6 },
     },
     exit: { opacity: 0, y: -20, transition: { duration: 0.4 } },
   }
@@ -98,7 +98,7 @@ export function Hero() {
             </Button>
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             className="flex items-center gap-10 pt-6"
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
@@ -122,7 +122,7 @@ export function Hero() {
               </p>
               <p className="text-sm text-muted-foreground">Active Builders</p>
             </div>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
 
         <motion.div
