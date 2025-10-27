@@ -18,7 +18,7 @@ export default function JoinWaitlist() {
     setLoading(true);
 
     try {
-      await axios.post('http://localhost:3000/api/join-waitlist', { email });
+      await axios.post('https://www.nexion.fun/api/join-waitlist', { email });
       setSubmitted(true);
     } catch (error) {
       console.error("Error submitting:", error);
