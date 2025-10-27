@@ -1,11 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
+import dotenv from "dotenv";
+dotenv.config();
 
 export async function POST(request: NextRequest) {
   try {
     const { email } = await request.json();
 
     const formUrl = process.env.google_url;
+    console.log(formUrl);
 
     // Google Forms expects URL-encoded data, not JSON
     const formData = new URLSearchParams();

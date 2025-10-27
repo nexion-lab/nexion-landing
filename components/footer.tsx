@@ -43,7 +43,7 @@ ale-110 transition-transform duration-300"
                 Nexion
               </span>
             </div>
-            <p className="text-muted-foreground">The no-code platform for building Web3 dApps on Solana.</p>
+            <p className="text-muted-foreground">The no-code platform for building  DApps on Solana.</p>
           </motion.div>
 
           <motion.div variants={itemVariants}>
