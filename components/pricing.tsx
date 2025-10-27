@@ -50,9 +50,9 @@ export function Pricing() {
       popular: true
     },
     {
-      name: "Pro Annual",
+      name: "max ",
       price: "$299",
-      period: "/year",
+      period: "/month",
       description: "Best value for long-term projects",
       features: [
         "Everything in Pro",
