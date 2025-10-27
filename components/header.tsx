@@ -50,13 +50,13 @@ export function Header() {
             Docs
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-300" />
           </a>
-          <a
-            href="#"
-            className="text-muted-foreground hover:text-foreground transition-colors duration-300 relative group"
-          >
-            Pricing
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-300" />
-          </a>
+           <a
+             href="#pricing"
+             className="text-muted-foreground hover:text-foreground transition-colors duration-300 relative group"
+           >
+             Pricing
+             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-300" />
+           </a>
         </div>
 
          <div className="hidden md:flex items-center gap-4">
@@ -96,9 +96,9 @@ export function Header() {
             <a href="#" className="block text-muted-foreground hover:text-foreground transition-colors duration-300">
               Docs
             </a>
-            <a href="#" className="block text-muted-foreground hover:text-foreground transition-colors duration-300">
-              Pricing
-            </a>
+             <a href="#pricing" className="block text-muted-foreground hover:text-foreground transition-colors duration-300">
+               Pricing
+             </a>
              <div className="flex gap-2 pt-4">
                <ThemeToggle />
                <Button variant="cta" size="lg" className="flex-1">
