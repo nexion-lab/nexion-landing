@@ -50,9 +50,9 @@ export function Pricing() {
       popular: true
     },
     {
-      name: "Pro Annual",
+      name: "Max ",
       price: "$299",
-      period: "/year",
+      period: "/month",
       description: "Best value for long-term projects",
       features: [
         "Everything in Pro",
@@ -70,7 +70,7 @@ export function Pricing() {
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Choose your plan</h2>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Start building Web3 dApps today. Upgrade or downgrade at any time.
+          Start building  DApps on solana. Upgrade or downgrade at any time.
         </p>
       </div>
 

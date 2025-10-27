@@ -38,7 +38,7 @@ export function CTA() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            Join thousands of builders creating the future of Web3 on Solana. Start for free today.
+            Join thousands of builders creating the future of Dapps on Solana. Start for free today.
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"
