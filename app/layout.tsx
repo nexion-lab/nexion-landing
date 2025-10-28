@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Nexion - AI Powered DApp Builder for Solana',
     description: "Discover Nexion , cutting edge AI platform that revolutionizes DApp building in Solana. Join the waitlist for early access.Made with ❤️ by Nexion Labs @ 2025",
-    url: 'https://nexion.ai',
+    url: 'https://nexion.fun',
     siteName: 'Nexion',
     images: [
       {
