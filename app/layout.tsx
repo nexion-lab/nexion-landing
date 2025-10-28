@@ -66,7 +66,7 @@ export default function RootLayout({
     "@type": "SoftwareApplication",
     "name": "Nexion",
     "description": "AI-powered platform for seamless technology integration",
-    "url": "https://nexion.ai",
+    "url": "https://nexion.fun",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
     "offers": {
